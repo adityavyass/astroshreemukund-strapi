@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "services",
+  "info": {
+    "singularName": "service",
+    "pluralName": "services",
+    "displayName": "Service",
+    "description": "Represents a service like Vivah Sanskaar, Kundali, etc."
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "category": {
+      "type": "string",
+      "required": true
+    },
+    "cardDescription": {
+      "type": "text"
+    },
+    "includes": {
+      "type": "json"
+    },
+    "overview": {
+      "type": "text"
+    },
+    "originStory": {
+      "type": "richtext"
+    },
+    "duration": {
+      "type": "string"
+    },
+    "idealFor": {
+      "type": "string"
+    },
+    "process": {
+      "type": "json"
+    },
+    "benefits": {
+      "type": "json"
+    },
+    "faqs": {
+      "type": "json"
+    }
+  }
+}
