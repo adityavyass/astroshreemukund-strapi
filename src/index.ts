@@ -270,6 +270,93 @@ export default {
         }
         console.log("Successfully seeded", seedData.length, "services!");
       }
+
+      const blogCount = await strapi.db.query('api::blog.blog').count();
+      if (blogCount === 0) {
+        console.log("No blogs found in database. Seeding initial data...");
+        const blogSeedData = [
+          {
+            "slug": "understanding-manglik-dosh",
+            "title": "Understanding Manglik Dosh: Myths and Remedies",
+            "excerpt": "Manglik Dosh is one of the most feared combinations in Vedic Astrology, but is it really as harmful as people think? Discover the truth behind the myths.",
+            "coverImage": "/images/blogs/manglik_dosh.jpg",
+            "content": [
+              "<p>Manglik Dosh occurs when the planet Mars (Mangal) is placed in the 1st, 4th, 7th, 8th, or 12th house of a Kundali. This placement is traditionally believed to cause friction, delays in marriage, and fiery temperament.</p></br>",
+              "<p>However, what many fail to understand is that Mars is also the planet of energy, drive, and ambition. Being a Manglik simply means you have an excess of Martian energy. The key to harmony is managing this energy, rather than fearing it.</p></br><b><h3>The Myth of Extreme Harm</h3></b><p>A common myth is that a Manglik must only marry another Manglik. While matching two high-energy individuals creates balance, there are several astrological exceptions (Pariharas) that naturally cancel the Manglik effect. For instance, if Mars is in its own sign or exalted, the Dosh is significantly reduced.</p></br><b><h3>Effective Remedies</h3></b>",
+              "<p>For those deeply affected, remedies like the Mangal Bhaat Pooja at Ujjain, reciting the Hanuman Chalisa, or chanting the Mangal Mantra can effectively channel this aggressive energy into productive spiritual forces.</p><p>Astrology is a guide to self-improvement. By understanding your chart, you can turn apparent flaws into your greatest strengths.</p>"
+            ],
+            "innerImages": [
+              "/images/blogs/saturn_astrology.jpg",
+              "/images/blogs/vedic_sanskaar.jpg"
+            ],
+            "author": "Pandit Ji",
+            "date": "August 12, 2026",
+            "readTime": "4 min read"
+          },
+          {
+            "slug": "importance-of-vastu-in-modern-homes",
+            "title": "The Importance of Vastu Shastra in Modern Apartments",
+            "excerpt": "Applying ancient Vastu principles to modern, high-rise apartments can significantly improve the flow of positive energy and peace in your home.",
+            "coverImage": "/images/blogs/vastu_home.jpg",
+            "content": [
+              "<p>In ancient times, homes were built from the ground up according to strict Vastu Shastra principles. Today, as we move into pre-constructed apartments, we often have little control over the fundamental architecture. However, Vastu is highly adaptable.</p><h3>Balancing the Elements</h3>",
+              "<p>Vastu is essentially the science of balancing the five elements: Earth, Water, Fire, Air, and Space. Even in an apartment, you can balance these elements using colors, shapes, and strategic placement of everyday items.</p><p>For example, the North-East direction represents the Water element and spiritual growth. Keeping this area clean, clutter-free, and perhaps adding a small water fountain or a sacred altar can instantly elevate the vibrations of the entire house.</p><h3>Common Modern Vastu Fixes</h3><p>If your kitchen (Fire element) is in the wrong direction, such as the North, placing a green marble slab under the stove can help mitigate the conflicting energies. Similarly, using mirrors to visually extend missing corners of an apartment is a powerful and non-destructive Vastu remedy.</p><p>A harmonious home is the foundation of a successful life. Small energetic shifts can yield profound results.</p>"
+            ],
+            "innerImages": [
+              "/images/blogs/vedic_sanskaar.jpg"
+            ],
+            "author": "Pandit Ji",
+            "date": "July 28, 2026",
+            "readTime": "5 min read"
+          },
+          {
+            "slug": "significance-of-16-sanskaars",
+            "title": "The 16 Sanskaars: Mapping the Human Journey",
+            "excerpt": "From conception to final rites, the 16 Sanskaars (sacraments) in Sanatan Dharma map out a spiritual blueprint for a righteous and fulfilled life.",
+            "coverImage": "/images/blogs/vedic_sanskaar.jpg",
+            "content": [
+              "<p>The word 'Sanskaar' comes from the Sanskrit root meaning to purify, refine, or perfect. In Vedic tradition, there are 16 major Sanskaars, collectively known as the Shodasha Sanskaars, that a human being goes through during their lifetime.</p><h3>Why Do We Need Sanskaars?</h3>",
+              "<p>Just as a raw diamond must be cut and polished to reflect its true brilliance, a human soul must undergo purification rituals to shed karmic impurities and awaken to its divine nature. These rituals mark crucial biological and psychological milestones.</p><h3>Key Milestones</h3><p>Some of the most prominent Sanskaars include:</p><ul><li><strong>Namakarana:</strong> The naming ceremony, giving the child an identity connected to the cosmos.</li><li><strong>Annaprashan:</strong> The first feeding of solid food, transitioning from purely maternal nourishment to the Earth's bounty.</li><li><strong>Upanayana:</strong> The sacred thread ceremony, marking the start of formal education and spiritual awakening.</li><li><strong>Vivah:</strong> Marriage, transitioning into the householder life to fulfill duties to society and family.</li><li><strong>Antyeshti:</strong> The final rites, returning the physical body to the five elements.</li></ul>",
+              "<p>Each Sanskaar serves as a spiritual anchor, ensuring that at every stage of life, the individual remains connected to Dharma and the divine source.</p>"
+            ],
+            "innerImages": [
+              "/images/blogs/manglik_dosh.jpg",
+              "/images/blogs/vastu_home.jpg"
+            ],
+            "author": "Pandit Ji",
+            "date": "July 10, 2026",
+            "readTime": "6 min read"
+          },
+          {
+            "slug": "navigating-saturn-return-sade-sati",
+            "title": "Navigating Sade Sati: A Period of Transformation",
+            "excerpt": "Sade Sati is often feared as a 7.5-year period of hardship. Learn why Saturn's transit is actually your greatest opportunity for karmic clearing.",
+            "coverImage": "/images/blogs/saturn_astrology.jpg",
+            "content": [
+              "<p>Sade Sati refers to the roughly 7.5-year period when Saturn (Shani) transits the 12th, 1st, and 2nd houses from your natal Moon sign. Because Saturn is the strict taskmaster of the zodiac, this period is historically associated with delays, struggles, and emotional turmoil.</p>",
+              "<h3>The True Purpose of Saturn</h3><p>Saturn is not a villain; He is the ultimate judge (Karmaphaldata). Sade Sati is a period of intense karmic auditing. Whatever illusions, toxic attachments, or weak foundations you have built your life upon will be tested and, if necessary, dismantled.</p><p>This period forces you to face reality. It strips away the ego, teaching humility, patience, and resilience. Those who embrace the lessons of Saturn emerge from Sade Sati completely transformed, stronger, and more authentic.</p><h3>How to Survive and Thrive</h3>",
+              "<p>The best remedy for Saturn is not just performing rituals, but embodying Saturnian qualities: discipline, hard work, honesty, and service to the underprivileged. Chanting the Shani Mantra, lighting a mustard oil lamp on Saturdays, and feeding the needy are excellent practices to seek His grace.</p><p>Do not fear Sade Sati. Embrace it as the ultimate period of spiritual refinement.</p>"
+            ],
+            "innerImages": [
+              "/images/blogs/manglik_dosh.jpg",
+              "/images/blogs/vedic_sanskaar.jpg"
+            ],
+            "author": "Pandit Ji",
+            "date": "June 15, 2026",
+            "readTime": "7 min read"
+          }
+        ];
+        
+        for (const data of blogSeedData) {
+          await strapi.db.query('api::blog.blog').create({
+            data: {
+              ...data,
+              publishedAt: new Date(),
+            }
+          });
+        }
+        console.log("Successfully seeded", blogSeedData.length, "blogs!");
+      }
     } catch (error) {
       console.error("Error during seeding data:", error);
     }
